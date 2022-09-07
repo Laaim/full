@@ -1,0 +1,390 @@
+/*ESTILOS GENERALES*/
+ul li{
+    font-size: 15px;
+    text-decoration: none;
+    margin: 20px;
+    display: inline;
+
+}
+.navBar{
+    display: inline-flex;
+}
+a{
+    text-decoration: none;
+    color:#180b16;}
+
+.logoHeader{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.bannerIndex{
+    position:relative;
+}
+
+.fraseBanner{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.boton{
+    position:absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-70%, -70%);
+    background: white;
+    padding: 15px;
+    margin: 2px;
+    border-radius: 30px;
+}
+.productosIndex img{
+    border-radius: 100px;
+    padding-right: 5px;
+    margin: 40px 50px;
+    padding-top: 7px;
+}
+.bgColour{
+    background-color:#FFEBF0;
+    padding-top: 20px;
+    padding-bottom: 30px;}
+.ubicacion{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.ubicacion img{
+    display: flex;
+    padding: 15px;
+}
+footer{
+    display: flex;
+    background-image: url("https://i.postimg.cc/PJvb5DPV/Dise-o-sin-t-tulo.png");
+}
+
+.logoFooter{
+    display: flex;
+    justify-content: left;
+}
+/*GRID INDEX*/
+
+.gridPrincipal{
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "header header header"
+    ". main ."
+    "footer footer footer";
+}
+.grid-container{
+    font-size: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ; 
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-template-areas:
+    "header header header"
+    "logoHeader navBar ."
+    ". bannerIndex ."
+    ".fraseBanner ."
+    ". boton ."
+    ". productosIndex ."
+    "ubicacion ubicacion ubicacion"
+    "footer footer footer";
+}
+header{grid-area: header;}
+.logoHeader{grid-area: logoHeader;}
+.navBar{grid-area: navBar;}
+.bannerIndex{grid-area: bannerIndex;}
+.fraseBanner{grid-area: fraseBanner;}
+.boton{grid-area: boton;}
+.productosIndex{grid-area: productosIndex;}
+.ubicacion{grid-area: ubicacion;}
+
+.contactanos{grid-area: contactanos;}
+footer{grid-area: footer;
+display: flex;
+align-items: center;
+justify-content: center;}
+
+header{grid-area:header;
+display: inline-flex;}
+
+.grid-container>*{
+    text-align: center;
+    color: white;
+
+}
+
+/* INDEX MOBILE MEDIAQUERIE*/
+
+@media only screen and (max-width: 768px){
+    header{flex-direction: column;}
+    footer{flex-direction: row;
+    display: flex;}
+	li{padding: 2px;}
+	ul{padding: 0;}
+    header{display: inline-flex ;}
+    .navBar{display: inline-flex;
+    justify-content: center;}
+    .grid-container{
+        font-size: 30px;
+        display: grid;
+        grid-template-columns: 100% ; 
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+
+        "header header header"
+        "bannerIndex bannerIndex bannerIndex"
+        ". . boton"
+        "productosIndex productosIndex productosIndex"
+        "ubicacion ubicacion ubicacion"
+        "footer footer footer"
+;}
+
+        .productosIndex{display:inline-flex;
+        justify-content: center;}
+        .productosIndex img{
+            border-radius: 5px;
+            padding-right: 5px;
+            margin: 60px 50px;
+            padding-top: 7px;}
+        }
+        footer{display: inline-flex;
+            flex-direction: row;}
+        .contactanos{display: inline-flex;}
+        .logoFooter{display: inline-flex;
+        }
+        .fraseBanner{display: none;}
+        .boton{display: none;}
+
+
+/*GRID PRODUCTOS*/
+
+.categorias{
+    max-width: 1200px;
+    margin:40px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.textoDestacado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+    .categorias-items{
+        flex-grow: 1;
+        flex-basis: 0;
+        min-width: 33.33%;
+        border:3px solid white;
+        box-sizing: border-box;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .productosDestacados{
+        margin-top: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5px;
+    }
+    .productosVistos{
+        margin-top: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;}
+
+    .tituloProd{
+        text-align: center;
+    }
+
+    .prodDestItem{
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    button{
+        outline: none;
+        background: black;
+        color: white;
+        padding:10px 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+        font-size: 16px;
+        margin:10px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+    }
+.prodDestItem{
+    height:500px;
+    background-size: cover;
+    background-position: center;
+}    
+
+.contactanos{
+    display: flex;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+/*MEDIA QUERIE PRODUCTOS */
+    @media only screen and (max-width: 768px){
+        .categorias-items{min-width: 100%;}
+        .productosDestacados{
+            grid-template-columns: 1fr;
+        }
+footer{min-width: 100%;}
+button{display: none;}}
+
+
+/* GRID CONTACTO*/
+.formulario{
+    padding: 40px 15px;}
+
+    .formulario{
+        background:pink;
+        height: 100%;
+        width: 100%;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        grid-gap: 6rem;
+    }
+    .contactoForm h1 {
+        font-size: 80px;
+        color: white;
+        margin-bottom: 20px;
+    }
+    .contactoForm p{
+        letter-spacing: 1px;
+        line-height: 26px;
+        font-size: 1.1rem;
+        margin-bottom: 3.8rem;
+    }
+    .contactoForm form{
+        position:relative;
+    }
+    .contactoForm form input, form textarea{
+        width:100%;
+        padding: 17px;
+        border: none;
+        outline: none;
+        background:palevioletred;
+        font-size: 1.1rem;
+        margin-bottom: 0.7rem;
+        border-radius: 10px;
+        }
+        .contactoForm form textarea{
+            resize:none;
+            height:200px;
+        }
+        @media only screen and (max-width: 768px){
+        .contenedor{max-width: 100%;} }
+
+        /*FAQ*/
+
+        .featuresProducts{
+            margin-top: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 5px;
+            border: solid black;}
+            
+
+        .featured-product-item{
+            border: 1px solid black;
+            border-radius: 5px;
+            text-align: center;
+            box-sizing: border-box;
+            height: 300px;
+        }
+
+/*ABOUT US*/
+.nosotros{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    width: 85vw;
+    margin: 0 auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "fondo fondo"
+    ". about";
+}
+
+.about{grid-area: about;
+}
+.fondoAbajo{grid-area: fondoAbajo;}
+.fondo{
+    grid-area: fondo;
+    background: rgb(236,200,253);
+    background: linear-gradient(90deg, rgba(236,200,253,1) 0%, rgba(156,144,250,1) 35%, rgba(243,137,177,1) 100%);};
+.about{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.about h2{
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 6px;
+    opacity: 0.9;
+}
+
+.about p{
+    padding-bottom: 15px;
+    font-weight: 300;
+    opacity: 0.7;
+    width: 60%;
+    line-height: 1.7;
+}
+
+
+/*MOBILE NOSOTROS*/
+@media only screen and (max-width: 768px){
+    
+    .nosotros{
+        grid-template-columns: 1fr;
+        width: 100%;
+        grid-template-areas: "fondo" "about";
+
+    }
+    .fondo{
+        max-width: 100%;
+        height: 100px;
+    }
+
+    .about h2{
+        font-size: 20px;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .about p{
+        font-size: 14px;
+        text-align: center;
+
+    }
+    .nosotrosFoto{
+        max-width: 100%;
+    }
+}
